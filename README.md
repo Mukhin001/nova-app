@@ -1,92 +1,72 @@
-# 🚀 Nova App — Full Stack Application
+🚀 Nova App — Full Stack Application
 
-**Nova App** — это учебный full-stack проект, построенный на **Next.js (App Router)**, **Node.js**, и **MongoDB (Atlas)**.  
-Он демонстрирует современный стек и архитектуру клиент–серверного приложения с аутентификацией, хранением данных и управлением состоянием через **Redux Toolkit**.
+Nova App — это персонализированная платформа новостей и погоды, позволяющая пользователю получать контент по выбранным городам и категориям.
 
----
+🧩 Основной функционал
+Регистрация и авторизация пользователей (JWT + bcrypt)
+Выбор городов и категорий новостей
+Персонализированная новостная лента
+Погода по выбранным городам
+Аналитика популярных городов и категорий
+Профиль пользователя с настройками
 
-## 🧩 Технологический стек
+🧠 Архитектура проекта
+Клиент взаимодействует только с собственным backend API
+Backend агрегирует данные из:
+NewsData API (новости)
+OpenWeatherMap API (погода)
+MongoDB используется для хранения:
+пользователей
+подписок
+аналитики
 
-### **Frontend**
+⚙️ Технологический стек
+Frontend
+Next.js (App Router)
+React
+TypeScript
+Redux Toolkit
+RTK Query
+CSS
 
-- ⚛️ [Next.js 14 (App Router)](https://nextjs.org/docs/app)
-- 🎨 TypeScript, Tailwind CSS
-- 🧠 Redux Toolkit + RTK Query
-- 🔐 JWT авторизация
-- ⚙️ Axios для запросов к API
+Backend
+Node.js
+MongoDB Atlas
+JWT + bcrypt
+REST API
 
-### **Backend**
+⚡ Архитектурные особенности
+SSR (Server-Side Rendering) для улучшения SEO и скорости загрузки
+Server Components и Client Components (Next.js)
+Централизованный backend для работы с внешними API
+Определение устройства пользователя (Client Hints + User-Agent)
+Определение геолокации пользователя по IP
+Система аналитики пользовательских подписок
 
-- 🧱 Node.js + Express (или чистый HTTP)
-- 🗄️ MongoDB (Atlas) + Mongoose
-- 🔑 Авторизация (JWT, bcrypt)
-- 🌐 REST API с CRUD-операциями
-
----
-
-## 🧠 Архитектура проекта
-
-nova-app/
-│
-├── backend/ # Серверная часть (Node.js + MongoDB)
-│ ├── app.ts # Точка входа сервера
-│ ├── lib/mongodb.ts # Подключение к базе данных
-│ ├── models/ # Mongoose-схемы
-│ ├── routes/ # Маршруты API
-│ └── ...
-│
-├── frontend/ # Клиентская часть (Next.js)
-│ ├── app/ # App Router
-│ ├── components/ # Компоненты UI
-│ ├── store/ # Redux Toolkit
-│ ├── api/ # RTK Query endpoints
-│ └── ...
-│
-├── .gitignore
-├── README.md
-└── package.json
-
----
-
-## ⚙️ Запуск проекта локально
-
-### 1️⃣ Клонирование репозитория
-
-```bash
+📦 Установка и запуск
+Клонирование проекта
 git clone https://github.com/Mukhin001/nova-app.git
 cd nova-app
 
-Установка зависимостей
-cd frontend && npm install
-cd ../backend && npm install
+Backend
+cd backend
+npm install
+npm run dev
 
-```
+Frontend
+cd frontend
+npm install
+npm run dev
 
-Запуск
+📊 Функциональность
+Возможность Доступ
+Просмотр ленты новостей ✅
+Погода по городам ✅
+Авторизация ✅
+Подписки на города ✅
+Аналитика ✅
+Редактирование профиля ✅
 
-# Терминал 1
-
-cd backend && npm run dev
-
-# Терминал 2
-
-cd frontend && npm run dev
-
-Функциональность пользователей
-Возможность Анонимный пользователь Авторизованный пользователь
-Просмотр контента ✅ ✅
-Комментирование ❌ ✅
-Публикация постов ❌ ✅
-Лайки / Избранное ❌ ✅
-Редактирование профиля ❌ ✅
-
-📦 В планах
-🔥 Добавить систему уведомлений
-📱 Адаптировать под мобильные устройства
-🧩 Ввести SSR-кеширование и оптимизацию SEO
-🌙 Тёмная тема
-
-Автор
+👤 Автор
 Игорь Мухин
-📧 Mukhin001@github.io
-🗓️ Проект создан для практики и демонстрации Full Stack навыков.
+GitHub: https://github.com/Mukhin001
