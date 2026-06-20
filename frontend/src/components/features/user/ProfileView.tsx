@@ -29,7 +29,15 @@ const ProfileView = ({ user, setMode }: ProfileViewProps) => {
 
         <div>
           <dt>Создан</dt>
-          <dd>{user?.createdAt}</dd>
+          <dd>
+            {user?.createdAt
+              ? new Intl.DateTimeFormat("ru-RU", {
+                  day: "2-digit",
+                  month: "long",
+                  year: "numeric",
+                }).format(new Date(user.createdAt))
+              : "-"}
+          </dd>
         </div>
       </dl>
       <Button

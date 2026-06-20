@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import uiReducer from "@/store/slices/uiSlice";
+// import uiReducer from "@/store/slices/uiSlice";
 import userReducer from "./slices/userSlice";
 import { baseApi } from "@/api/baseApi";
 import toastReduser from "@/components/ui/toast/toastSlice";
@@ -7,7 +7,7 @@ import toastReduser from "@/components/ui/toast/toastSlice";
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      ui: uiReducer,
+      // ui: uiReducer,
       user: userReducer,
       toast: toastReduser,
       [baseApi.reducerPath]: baseApi.reducer,

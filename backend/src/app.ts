@@ -17,7 +17,7 @@ import { handleFeed } from "./handlers/user/handleFeed.js";
 import { handleGetCityStats } from "./handlers/handleGetCityStats.js";
 
 const FRONTEND_URL = (
-  process.env.FRONTEND_URL || "http://localhost:5000"
+  process.env.FRONTEND_URL || "http://localhost:3000"
 ).replace(/\/$/, "");
 const PORT = Number(process.env.PORT) || 5000;
 
